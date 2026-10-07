@@ -1,0 +1,20 @@
+diagnosis_task:
+  description: >
+    Analyze the following incident logs for service '{service_name}':
+    ---
+    {logs}
+    ---
+    Identify the likely root cause, assign a severity level (CRITICAL, HIGH, MEDIUM, LOW), 
+    and provide 3 immediate mitigation steps.
+  expected_output: >
+    A concise incident triage report containing Severity, Root Cause Summary, and Immediate Actions.
+
+postmortem_task:
+  description: >
+    Using the diagnosis report below, generate an Executive Incident Post-Mortem:
+    ---
+    {diagnosis_output}
+    ---
+    Include Executive Summary, Business Risk Assessment, and 3 Preventive Measures to prevent recurrence.
+  expected_output: >
+    A fully formatted Markdown Post-Mortem document.
